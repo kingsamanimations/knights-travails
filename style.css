@@ -1,6 +1,6 @@
 body {
     text-align: center;
-    background-color: rgb(80, 80, 80);
+    background-color: #205727;
 }
 
 .cell {
@@ -10,11 +10,11 @@ body {
     border-style: inset;
 }
 
-.blackcell {
+.black {
     background-color: black;
 }
 
-.whitecell {
+.white {
     background-color: white;
 }
 
