@@ -1,7 +1,7 @@
 const knightMoves = () => {
 
     // Variables and chessboard table
-    const defaultStartLocation = [0,0];
+    const defaultStartLocation = [3,3];
     const coordArray = [];
     const chessBoard = document.createElement("table");
 
@@ -10,28 +10,23 @@ const knightMoves = () => {
     for (let i = 0; i < 8; i++) {
         const tableRow = document.createElement("tr");
         let cellRowCoord = Math.abs(i - 7);
-        tableRow.textContent = cellRowCoord;
 
         for (let z = 0; z < 8; z++) {
             const tableCell =  document.createElement("td");
             let cellcollumnCoord = z;
-            tableRow.textContents = `${cellRowCoord},${cellcollumnCoord}`;
+            tableCell.dataset.coordArray = `${cellRowCoord},${cellcollumnCoord}`;
+
+            // tableCell.setAttribute("class", (i + z) % 2 == 0 ? "cell white" : "cell black");
 
             // Looping through to shade odd value cells (1, 3, 5, etc)
             if ((i + z) % 2 == 0) {
                 tableCell.setAttribute("class", "cell white");
                 tableRow.append(tableCell);
-                coordArray.push(cellRowCoord);
-                coordArray.push(cellcollumnCoord);
-                tableCell.dataset.coordArray = coordArray;
-                coordArray.slice(0, 2);
+                tableCell.dataset.coordArray = `${cellRowCoord},${cellcollumnCoord}`;
             } else {
                 tableCell.setAttribute("class", "cell black");
                 tableRow.append(tableCell);
-                coordArray.push(cellRowCoord);
-                coordArray.push(cellcollumnCoord);
-                tableCell.dataset.coordArray = coordArray;
-                coordArray.slice(0, 2);
+                tableCell.dataset.coordArray = `${cellRowCoord},${cellcollumnCoord}`;
             }
         }
         chessBoard.appendChild(tableRow);
@@ -39,10 +34,21 @@ const knightMoves = () => {
 
     // Create Knight at position 0,0;
     const cellNodes = chessBoard.querySelectorAll("td");
+    
+    // Debug cellNodes
     cellNodes.forEach((cellNode) => {
         if (defaultStartLocation.toString() === cellNode.dataset.coordArray) {
-            let knight = document.createElement("img");
+            console.log("MATCHED!");
+        }
+    });
+
+
+    cellNodes.forEach((cellNode) => {
+        if (cellNode.dataset.coordArray === defaultStartLocation.toString()) {
+            const knight = document.createElement("img");
             knight.src = "./svg-images/svgviewer-output(2).svg";
+            knight.style.width = "40px";
+            knight.style.height = "40px";
             cellNode.appendChild(knight);
         }
     });

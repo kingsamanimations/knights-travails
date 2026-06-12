@@ -6,7 +6,6 @@ body {
 .cell {
     height: 100px;
     width: 100px;
-    border: 1.5px solid rgb(172, 172, 172);
     border-style: inset;
 }
 
@@ -40,9 +39,4 @@ img {
 
 .clear-board {
     margin-top: 15px;
-}
-
-/* Test */
-td {
-    border: 1px solid red;
 }
