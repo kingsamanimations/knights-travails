@@ -34,21 +34,14 @@ const knightMoves = () => {
 
     // Create Knight at position 0,0;
     const cellNodes = chessBoard.querySelectorAll("td");
-    
-    // Debug cellNodes
-    cellNodes.forEach((cellNode) => {
-        if (defaultStartLocation.toString() === cellNode.dataset.coordArray) {
-            console.log("MATCHED!");
-        }
-    });
 
 
     cellNodes.forEach((cellNode) => {
         if (cellNode.dataset.coordArray === defaultStartLocation.toString()) {
             const knight = document.createElement("img");
             knight.src = "./svg-images/svgviewer-output(2).svg";
-            knight.style.width = "40px";
-            knight.style.height = "40px";
+            knight.style.width = "50px";
+            knight.style.height = "50px";
             cellNode.appendChild(knight);
         }
     });

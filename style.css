@@ -1,12 +1,17 @@
 body {
     text-align: center;
     background-color: #205727;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .cell {
     height: 100px;
     width: 100px;
-    border-style: inset;
+    border-style: none;
 }
 
 .black {
@@ -39,4 +44,20 @@ img {
 
 .clear-board {
     margin-top: 15px;
+}
+
+.start {
+    margin: 10px;
+    color: rgb(0, 0, 0);
+    background-color: blanchedalmond;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 20px;
+}
+
+.clear {
+    margin: 10px;
+    color: rgb(0, 0, 0);
+    background-color: blanchedalmond;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 20px;
 }
