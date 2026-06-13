@@ -1,7 +1,7 @@
 const knightMoves = () => {
 
     // Variables and chessboard table
-    const defaultStartLocation = [3,3];
+    const defaultStartLocation = [0,0];
     const coordArray = [];
     const chessBoard = document.createElement("table");
 
@@ -49,6 +49,14 @@ const knightMoves = () => {
     // Displaying the chess board with html ID
     const displayContainer = document.getElementById("display-div-centre");
     displayContainer.appendChild(chessBoard);
+}
+
+// Reseting the board
+function resetBoard() {
+    const reset = document.querySelector(".clear");
+    reset.addEventListener("click", function() {
+        location.reload();
+    });
 }
 
 export { knightMoves };

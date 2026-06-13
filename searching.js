@@ -1,3 +1,4 @@
+import { displaying } from "./display.js";
 import { knightMoves } from "./knight.js";
 
 const squareReg =  new Map();
@@ -75,6 +76,13 @@ const travails = (begin, end) => {
     console.log(`You made it in ${path.length - 1} moves!`);
     console.log(`Here's the path:`);
     path.forEach(square => console.log(square.name()));
+
+    let squareCoord = [];
+    path.forEach((square) => {
+        squareCoord.push(square.name())
+    });
+
+    displaying(path, squareCoord);
 }
 
 
