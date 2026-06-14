@@ -1,11 +1,12 @@
 body {
     text-align: center;
-    background-color: #205727;
+    background-color: #348f40;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 h1 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: blanchedalmond;
 }
 
 .cell {
@@ -36,6 +37,12 @@ h1 {
 img {
     height: 75px;
     width: 75px;
+    pointer-events: none;
+}
+
+p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #000000;
 }
 
 .start-game {
@@ -68,4 +75,24 @@ img {
   background-color: rgb(226, 222, 162);
   text-align: center;
   box-shadow: 10px 5px 5px rgb(231, 185, 163);
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+#box p {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#moveIt {
+    display: flex;
+    align-items: center;
+}
+
+#coordList {
+    display: flex;
+    align-items: center;
+}
+

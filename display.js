@@ -1,3 +1,5 @@
+import './style.css';
+
 const displaying = (path, squareCoord) => {
     // Remove p tags from last moves
     if (document.querySelector("p") !== null) {

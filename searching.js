@@ -73,8 +73,7 @@ const travails = (begin, end) => {
         const prevSquare = path[0].getPredecessor();
         path.unshift(prevSquare);
     }
-    console.log(`You made it in ${path.length - 1} moves!`);
-    console.log(`Here's the path:`);
+
     path.forEach(square => console.log(square.name()));
 
     let squareCoord = [];
